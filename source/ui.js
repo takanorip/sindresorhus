@@ -1,9 +1,7 @@
 'use strict';
-const path = require('path');
 const {h, Text} = require('ink');
 const SelectInput = require('ink-select-input');
 const opn = require('opn');
-const terminalImage = require('terminal-image');
 
 const open = url => opn(url, {wait: false});
 
@@ -20,39 +18,23 @@ const handleSelect = item => {
 const items = [
 	{
 		label: 'Website',
-		url: 'https://sindresorhus.com'
+		url: 'https://takanorip.com'
 	},
 	{
 		label: 'Twitter',
-		url: 'https://twitter.com/sindresorhus'
+		url: 'https://twitter.com/takanoripe'
 	},
 	{
 		label: 'GitHub',
-		url: 'https://github.com/sindresorhus'
+		url: 'https://github.com/takanorip'
 	},
 	{
-		label: 'Blog',
-		url: 'https://blog.sindresorhus.com'
+		label: 'Qiita',
+		url: 'https://qiita.com/takanorip'
 	},
 	{
-		label: 'Ask Me Anything',
-		url: 'https://github.com/sindresorhus/ama'
-	},
-	{
-		label: 'Contact',
-		url: 'https://sindresorhus.com/contact'
-	},
-	{
-		label: 'Support my open source work',
-		url: 'https://www.patreon.com/sindresorhus'
-	},
-	{
-		label: 'Unicorns!',
-		async action() {
-			console.log(await terminalImage.file(path.join(__dirname, 'unicorn1.gif')));
-			console.log(await terminalImage.file(path.join(__dirname, 'unicorn2.gif')));
-			console.log(await terminalImage.file(path.join(__dirname, 'unicorn3.gif')));
-		}
+		label: 'Support me',
+		url: 'https://www.buymeacoffee.com/takanorip'
 	},
 	// TODO: Add separator item here when https://github.com/vadimdemedes/ink-select-input/issues/4 is done
 	{
